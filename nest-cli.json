@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/taller-arquitectura/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/taller-arquitectura/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/taller-arquitectura",
+  "projects": {
+    "taller-arquitectura": {
+      "type": "application",
+      "root": "apps/taller-arquitectura",
+      "entryFile": "main",
+      "sourceRoot": "apps/taller-arquitectura/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/taller-arquitectura/tsconfig.app.json"
+      }
+    },
+    "user": {
+      "type": "application",
+      "root": "apps/user",
+      "entryFile": "main",
+      "sourceRoot": "apps/user/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user/tsconfig.app.json"
+      }
+    },
+    "prgress": {
+      "type": "application",
+      "root": "apps/prgress",
+      "entryFile": "main",
+      "sourceRoot": "apps/prgress/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/prgress/tsconfig.app.json"
+      }
+    }
+  }
+}
